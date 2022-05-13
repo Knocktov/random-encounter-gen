@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Encounter Generator</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron animated bounceInDown">
+      <form id="form-control">
+        <h4>Average Party Level</h4>
+        <select class="form-group" id="partyLevel">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+        </select>
+        <br>
+        <br>
+        <h4>Group Size</h4>
+        <select class="form-group" id="partyMembers">
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+        <br>
+        <br>
+        <h4>Difficulty</h4>
+        <select class="form-group" id="challengeDifficulty">
+          <option value="0">Easy</option>
+          <option value="1">Medium</option>
+          <option value="2">Hard</option>
+          <option value="3">Deadly</option>
+        </select>
+        <br>
+        <br>
+        <h4>Environment</h4>
+        <select class="form-group" id="environment" name="environment">
+          <option value="random">Random</option>
+          <option value="arcticEnvironment">Arctic</option>
+          <option value="coastalEnvironment">Coastal</option>
+          <option value="desertEnvironment">Desert</option>
+          <option value="forestEnvironment">Forest</option>
+          <option value="grasslandEnvironment">Grassland</option>
+          <option value="hillEnvironment">Hill</option>
+          <option value="mountainEnvironment">Mountain</option>
+          <option value="swampEnvironment">Swamp</option>
+          <option value="underdarkEnvironment">Underdark</option>
+          <option value="underwaterEnvironment">Underwater</option>
+          <option value="urbanEnvironment">Urban</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-danger" id="submit">Create Encounter</button>
+      </form>
+    </div> 
+  </div>
+      <div class="resultContainer animated fadeIn">
+        <div class="results">
+          <div class="typewriter">
+            <h1 class="printOff">Your Encounter Details</h1>
+            <div id="output">
+              <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div  class="col-md-3">
+                  <form id="resultName">
+                    <h5>Monster Name</h5>
+                    <h4 id="monsterOutput0"></h4>
+                    <h4 class="speech" id="xtra0"></h4>
+                    <h4 id="monsterOutput1"></h4>
+                    <h4 class="speech" id="xtra1"></h4>
+                    <h4 id="monsterOutput2"></h4>
+                    <h4 class="speech" id="xtra2"></h4>
+                    <h4 id="monsterOutput3"></h4>
+                    <h4 class="speech" id="xtra3"></h4>
+                    <h4 id="monsterOutput4"></h4>
+                    <h4 class="speech" id="xtra4"></h4>
+                    <h4 id="monsterOutput5"></h4>
+                    <h4 class="speech" id="xtra5"></h4>
+                    <h4 id="monsterOutput6"></h4>
+                    <h4 class="speech" id="xtra6"></h4>
+                    <h4 id="monsterOutput7"></h4>
+                    <h4 class="speech" id="xtra7"></h4>
+                    <h4 id="monsterOutput8"></h4>
+                    <h4 class="speech" id="xtra8"></h4>
+                    <h4 id="monsterOutput9"></h4>
+                    <h4 class="speech" id="xtra9"></h4>
+                    <h4 id="monsterOutput10"></h4>
+                    <h4 class="speech" id="xtra10"></h4>
+                  </div >
+                  <div class="col-md-3">
+                    <h5 id="cr">Challenge Rating</h5>
+                    <h4 id="crOutput0"></h4>
+                    <h4 id="crOutput1"></h4>
+                    <h4 id="crOutput2"></h4>
+                    <h4 id="crOutput3"></h4>
+                    <h4 id="crOutput4"></h4>
+                    <h4 id="crOutput5"></h4>
+                    <h4 id="crOutput6"></h4>
+                    <h4 id="crOutput7"></h4>
+                    <h4 id="crOutput8"></h4>
+                    <h4 id="crOutput9"></h4>
+                    <h4 id="crOutput10"></h4>
+                  </div>
+                  <div class="col-md-3"></div>
+                  </form>
+                </br>
+              </div>
+            </div>
+          </div>
+          <div class="reset animated bounceInUp">
+            <button onclick="(window.location.reload(false))" class="btn animated bounceInUp" id="resetButton">Try Again</button> 
+          </div>
+        </div>
+      </div>
+  </body>
+  <footer>All creature content and rules are the intellectual property of Wizards of the Coast.
+    This site is not affiliated with Wizards of the Coast in any way.</footer>
+</html>
