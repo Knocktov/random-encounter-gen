@@ -5,9 +5,12 @@ $("#form-control").submit(function (event) {
     $(".reset").show();
     $(".jumbotron").fadeOut(200);
     $("#btn-place").fadeOut(200);
+
+    generateEncounter();
+})
  
 
-    (async () => {
+   const generateEncounter = async () => {
       let encounter = new Encounter;
       encounter.partyLevel = $("#partyLevel").val();
       encounter.partyMembers = $("#partyMembers").val();
@@ -25,15 +28,14 @@ $("#form-control").submit(function (event) {
           $(`#monsterOutput${i}`).click(function() {
             for (let j = 0; j < encounter.encounterArray.length; j++){
               if (i==j) {
-                $(`#xtra${i}`).toggle();
-                $(`#xtra${i}`).html("  HP: " + `<span>${encounter.encounterArray[i].hit_points}</span>` + "  AC: " + `<span>${encounter.encounterArray[i].armor_class}</span>` +  " Type: " + `<span>${encounter.encounterArray[i].type}</span>`);
+                $(`#xtra${j}`).toggle();
+                $(`#xtra${j}`).html("  HP: " + `<span>${encounter.encounterArray[i].hit_points}</span>` + "  AC: " + `<span>${encounter.encounterArray[i].armor_class}</span>` +  " Type: " + `<span>${encounter.encounterArray[i].type}</span>`);
               }
               else {
-                $(`#xtra${i}`).hide();
+                $(`#xtra${j}`).hide();
               }
           }
         })
       }
     }
-  })
-})
+  }
