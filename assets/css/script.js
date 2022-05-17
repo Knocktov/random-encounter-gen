@@ -1,10 +1,5 @@
-import './styles.css';
-import $ from "jquery";
-
-import { Encounter } from './gen.js';
-
-  $("#form-control").submit(function (event) {
-    console.log(here);
+$("#form-control").submit(function (event) {
+    console.log("here");
     event.preventDefault();
     $(".resultContainer").show();
     $(".reset").show();
@@ -236,3 +231,4 @@ import { Encounter } from './gen.js';
       }
     })(); 
   });
+  

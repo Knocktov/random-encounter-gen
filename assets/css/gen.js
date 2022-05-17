@@ -1,4 +1,4 @@
-export class Encounter {
+class Encounter {
     constructor(partyLevel, partyMembers, challengeDifficulty, xpThreshold, monsterType, environment, currentEnvironmentArray, monsterXpPool) {
       this.partyLevel = partyLevel;
       this.partyMembers = partyMembers;
